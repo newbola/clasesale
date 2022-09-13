@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: black">
+    <div class="contenedor">
+      <div class="cuadro movement">dfdf</div>
+    </div>
+    <div class="extra" id="circle1"></div>
+    <div class="extra" id="circle1"></div>
+</body>
+</html>
+<style>
+  .contenedor {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    background-color: grey;
+  }
+  .cuadro {
+    position: absolute;
+    top: 0; /* margin solo funciona con top, left , right, bottom 0, sino ya tiene una espacio definido*/
+    left: 30px;
+    /* right: 0;
+    bottom: 0; */
+    width: 50%;
+    height: 50%;
+    transition: all 0.5s ease-out;
+    /* margin: auto; */
+    /* background-color: limegreen; */
+  }
+
+  .movement {
+    background: linear-gradient(to right, #e82118 50%, #FFF 50%);
+    background-size: 200% 100%;
+    background-position: right;
+  }
+  .cuadro:hover {
+    background-position: left;
+  }
+
+  .extra {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  #circle1 {
+    background: linear-gradient(0deg, blue, green 10%, red 50%);
+  }
+</style>
