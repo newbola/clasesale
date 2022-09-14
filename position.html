@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cuadros" id="uno">uno</div>
+        <div class="cuadros" id="dos">dos</div>
+        <div class="cuadros" id="tres">tres</div>
+        <div class="cuadros" id="cuatro">cuatro</div>
+        <div class="cuadros" id="cinco">cinco</div>
+    </div>
+    <div class="container2">
+        <div class="cuadros" id="">seis</div>
+        <div class="cuadros" id="">siete</div>
+        <div class="cuadros" id="">ocho</div>
+        <div class="cuadros" id="">nueve ientos cuatro mils</div>
+        <div class="cuadros" id="">diez</div>
+    </div>
+</body>
+<style>
+    body{
+        border: 3px solid pink;
+        width: 300px;
+        position: relative;
+    }
+    .container {
+        border: 4px solid green;
+        position: relative;/* relative ocupa ancho del contenedor */
+        top: 50px;
+        left: 200px;
+        /* display: inline-block; */
+    }
+    .container2 {
+        /* top: 0px;  */
+        /* al poner (top bottom left o right) + relative || absolute toma la posicion del pradre pocicionado si se quita entonces sigue el orden de cascada en html */
+        
+        border: 4px solid skyblue;
+        position: absolute; /* absolute ocupa el hancho del elemento hijo mas grande su elemento espacio */
+    }
+    .container > .cuadros {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+        background-color: red;
+        /* position: absolute; */
+    }
+    .cuadros:first-child{
+        background-color: lime;
+    }
+    .cuadros:nth-child(3){
+        border: 3px solid black;
+    }
+    .cuadros:nth-child(2n){
+        border: 4px solid purple;
+    }
+    .cuadros:last-child{
+        border: 5px dotted blue;
+    }
+</style>
+</html>
