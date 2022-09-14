@@ -18,29 +18,33 @@
         <div class="cuadros" id="">seis</div>
         <div class="cuadros" id="">siete</div>
         <div class="cuadros" id="">ocho</div>
-        <div class="cuadros" id="">nueve ientos cuatro mils</div>
+        <div class="cuadros" id="">nueve ientos cuatro mils lkjsdf lksjdf lsjdf lksjdf lkjsdf</div>
         <div class="cuadros" id="">diez</div>
     </div>
+    <div class="container3">ssssss</div>
+    <p>holanfas</p>
 </body>
 <style>
     body{
+        background-color: grey;
         border: 3px solid pink;
         width: 300px;
         position: relative;
     }
+    /* por defecto todo los elementos parten con posicion static que ademas no es afectado dpor top , left , right ni bottom */
     .container {
         border: 4px solid green;
-        position: relative;/* relative ocupa ancho del contenedor */
-        top: 50px;
-        left: 200px;
+        position: relative;/* relative mantiene ocupado el espacio en su padre que esta posicionado.  hacer prueba cambiando a absolute y ver resultado */
+        /* top: -40px; */
+        left: -100px;
         /* display: inline-block; */
     }
     .container2 {
         /* top: 0px;  */
-        /* al poner (top bottom left o right) + relative || absolute toma la posicion del pradre pocicionado si se quita entonces sigue el orden de cascada en html */
-        
+        /* al poner (top bottom left o right) + relative || absolute toma la posicion del primer pradre pocicionado, si se quita entonces sigue el orden de cascada en html */
         border: 4px solid skyblue;
-        position: absolute; /* absolute ocupa el hancho del elemento hijo mas grande su elemento espacio */
+        position: relative; /* absolute hace que se posicione en cascada html despues que su hermano antecesor , pero no reserva espacio, por lo que se sobreponen elementos. 
+        en caso de poner medidas de posicionamiento(top , left ...) es se localiza en su padre mas cercano posicionado*/
     }
     .container > .cuadros {
         width: 200px;
@@ -48,6 +52,12 @@
         margin-bottom: 10px;
         background-color: red;
         /* position: absolute; */
+    }
+    .container3 {
+        border: 3px solid green;
+        /* width: 100vw; */
+        display: inline;
+        z-index: 1000;
     }
     .cuadros:first-child{
         background-color: lime;
@@ -60,6 +70,9 @@
     }
     .cuadros:last-child{
         border: 5px dotted blue;
+    }
+    p {
+        border: 1px solid coral;
     }
 </style>
 </html>
